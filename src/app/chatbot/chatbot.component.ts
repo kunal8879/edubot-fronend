@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { timestamp } from 'rxjs';
 import { ChatbotServiceService } from './chatbot-service.service';
 
 @Component({
@@ -14,6 +15,8 @@ export class ChatbotComponent implements OnInit{
   userMessage!: string;
   response!: string;
 
+  // timestamp = new Date();
+
   constructor(private chatbotServiceService: ChatbotServiceService) { }
 
   ngOnInit(): void {
@@ -27,6 +30,7 @@ export class ChatbotComponent implements OnInit{
   }
 
   getResponse() {
+    // this.timestamp = new Date();
     console.log(this.userMessage);
     this.userPreviousMessage.push(this.userMessage);
   }
