@@ -7,26 +7,30 @@
     <div class="head-text">
         Let's chat? - Online
     </div>
+
     <div class="chat-box">
-        <div class="desc-text">
+        <div class="messages">
             <ng-container *ngFor="let message of messages">
-                <div class="message from" *ngIf="message.author === 'bot'; else userMessage">
+                <div matTooltip="Tooltip!" matTooltipPosition="above" class="message from"
+                    *ngIf="message.author === 'bot'; else userMessage">
                     {{ message.content }}
                 </div>
                 <ng-template #userMessage>
-                    <div class="userMessage message to" [ngClass]="{from: message.author === 'bot',to: message.author === 'user'}">
+                    <div matTooltip="{{ message.time }}" class="message to"
+                        [ngClass]="{from: message.author === 'bot',to: message.author === 'user'}">
                         {{ message.content }}
                     </div>
                 </ng-template>
             </ng-container>
         </div>
-        <br>
-        <form action="#">
-            <div class="field">
-                <input name="userMessage" id="userMessage" type="text" placeholder="Message" [(ngModel)]="value" (keyup.enter)="sendMessage()" required>
-                <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true" (click)="sendMessage()"></i></button>
-            </div>
-        </form>
-
     </div>
+    <form class="input" action="#">
+        <input name="userMessage" id="userMessage" type="text" placeholder="Message" [(ngModel)]="value"
+            (keyup.enter)="sendMessage()" required>
+        <div class="button">
+            <button type="submit">
+                <i class="fa fa-paper-plane" (click)="sendMessage()"></i>
+            </button>
+        </div>
+    </form>
 </div>

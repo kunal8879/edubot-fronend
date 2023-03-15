@@ -1,8 +1,8 @@
 import { Injectable, Type } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Subject, timestamp } from 'rxjs';
 
 export class Message {
-  constructor(public author: string, public content: string) { }
+  constructor(public author: string, public content: string, public time: string) { }
 }
 
 @Injectable({
@@ -22,9 +22,9 @@ export class ChatbotServiceService {
   }
 
   getBotAnswer(msg: string) {
-    const userMessage = new Message('user', msg);
+    const userMessage = new Message('user', msg, new Date().toString().split(' ')[4]);
     this.conversation.next([userMessage]);
-    const botMessage = new Message('bot', this.getBotMessage(msg));
+    const botMessage = new Message('bot', this.getBotMessage(msg), new Date().toString().split(' ')[4]);
     setTimeout(() => {
       this.conversation.next([botMessage]);
     }, 1500);

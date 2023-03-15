@@ -8,12 +8,6 @@ import { ChatbotServiceService, Message } from './chatbot-service.service';
 })
 export class ChatbotComponent implements OnInit{
 
-  // userPreviousMessage: string[] = [];
-  // previousResponse: string[] = [];
-
-  // userMessage!: string;
-  // response!: string;
-
   messages: Message[] = [];
   value: string = '';
 
@@ -23,11 +17,14 @@ export class ChatbotComponent implements OnInit{
     this.chatbotServiceService.conversation.subscribe((val) => {
       this.messages = this.messages.concat(val);
     });
+    this.messages.push(new Message('bot', 'Hello, I am Test Bot. How can I help you?', new Date().toString().split(' ')[4]));
   }
 
   sendMessage() {
-    this.chatbotServiceService.getBotAnswer(this.value);
-    this.value = '';
+    if(this.value.trim() != '') {
+      this.chatbotServiceService.getBotAnswer(this.value);
+      this.value = '';
+    }
   }
 
   // getResponse() {
