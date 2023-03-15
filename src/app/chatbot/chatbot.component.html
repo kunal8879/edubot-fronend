@@ -9,19 +9,22 @@
     </div>
     <div class="chat-box">
         <div class="desc-text">
-            <div class="ai-chat" *ngFor="let responseMsg of previousResponse">
-                {{responseMsg}}
-            </div>
-            <div class="user-chat" *ngFor="let usersMsg of userPreviousMessage">
-                {{usersMsg}}
-            </div>
+            <ng-container *ngFor="let message of messages">
+                <div class="message from" *ngIf="message.author === 'bot'; else userMessage">
+                    {{ message.content }}
+                </div>
+                <ng-template #userMessage>
+                    <div class="userMessage message to" [ngClass]="{from: message.author === 'bot',to: message.author === 'user'}">
+                        {{ message.content }}
+                    </div>
+                </ng-template>
+            </ng-container>
         </div>
         <br>
         <form action="#">
             <div class="field">
-                <!-- <input type="text" placeholder="Message"/> -->
-                <input name="userMessage" id="userMessage" type="text" placeholder="Message" [(ngModel)]="userMessage" required>
-                <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true" (click)="getResponse()"></i></button>
+                <input name="userMessage" id="userMessage" type="text" placeholder="Message" [(ngModel)]="value" (keyup.enter)="sendMessage()" required>
+                <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true" (click)="sendMessage()"></i></button>
             </div>
         </form>
 

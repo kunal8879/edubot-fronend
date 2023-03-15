@@ -49,7 +49,7 @@ label i.fas {
     right: 3%;
     bottom: 1%;
     max-width: 475px;
-    min-width: 400px;
+    min-width: 475px;
     height: 85%;
     background: #fff;
     border-radius: 15px;
@@ -133,19 +133,39 @@ form .field button {
     align-content: center;
 }
 
-.ai-chat {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+.message {
+    border-radius: 10px;
+    padding: 5px 10px 3px;
+    position: relative;
+    font-size: 15px;
     margin-bottom: 10px;
 }
 
-.user-chat {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    margin-bottom: 10px;
+.message.to {
+    text-align: left;
+    background-color:#2095FE;
+    color:#fff;
+    width: max-content;
+    max-width: 300px;
+    margin-left: 50%;
+    float: right;
 }
+
+.message.from {
+    text-align: left;
+    background-color:#E5E4E9;
+    color:#363636;
+    width: max-content;
+    max-width: 300px;
+    margin-right: 50%;
+    float: left;
+}
+
+/* .message.to+.message.to,
+.message.from+.message.from {
+    margin-top: -10px;
+} */
+
 
 
 
