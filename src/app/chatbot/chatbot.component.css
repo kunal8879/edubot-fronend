@@ -1,5 +1,6 @@
 #click {
     display: none;
+    position: fixed;
 }
 
 label {
@@ -86,6 +87,7 @@ label i.fas {
     font-size: 17px;
     font-weight: 500;
     overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 
 .chat-box::-webkit-scrollbar {

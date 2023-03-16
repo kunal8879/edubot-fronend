@@ -11,9 +11,9 @@
     <div class="chat-box">
         <div class="messages">
             <ng-container *ngFor="let message of messages">
-                <div matTooltip="Tooltip!" matTooltipPosition="above" class="message from"
+                <div matTooltip="{{message.time}}" matTooltipPosition="below" class="message from"
                     *ngIf="message.author === 'bot'; else userMessage">
-                    {{ message.content }}
+                    {{message.content}}
                 </div>
                 <ng-template #userMessage>
                     <div matTooltip="{{ message.time }}" class="message to"
@@ -22,6 +22,7 @@
                     </div>
                 </ng-template>
             </ng-container>
+            <div class="message from" *ngIf="isLoading">...</div>
         </div>
     </div>
     <form class="input" action="#">
