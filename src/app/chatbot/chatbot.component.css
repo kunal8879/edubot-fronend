@@ -1,13 +1,18 @@
+.chatbot {
+    position: fixed;
+    bottom: 3px;
+    right: 3px;
+    /* display: ; */
+}
 #click {
     display: none;
-    position: fixed;
 }
 
 label {
     z-index: 1000;
     position: absolute;
-    right: 0.8rem;
-    bottom: 0.8rem;
+    right: 3px;
+    bottom: 3px;
     height: 55px;
     width: 55px;
     background: -webkit-linear-gradient(left, #51e5a1, #407cf3);
@@ -50,7 +55,8 @@ label i.fas {
     bottom: -10rem;
     right: 20px;
     width: 475px;
-    height: 650px;
+    max-height: 675px;
+    min-height: 600px;
     background: #fff;
     border-radius: 15px;
     box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.25);
@@ -81,6 +87,7 @@ label i.fas {
 }
 
 .chat-box {
+    min-height: 500px;
     height: 80%;
     color: #515365;
     line-height: 25px;
@@ -106,9 +113,10 @@ label i.fas {
 
 .input {
     align-content: center;
-    margin: 10px auto 0px;
+    margin: 10px auto 10px;
     height: 45px;
     width: 95%;
+    bottom: 0px;
     border: none;
     outline: none;
     border-radius: 10px;
