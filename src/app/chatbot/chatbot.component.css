@@ -1,7 +1,7 @@
 .chatbot {
     position: fixed;
-    bottom: 3px;
-    right: 3px;
+    bottom: 10px;
+    right: 20px;
     /* display: ; */
 }
 #click {
