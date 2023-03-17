@@ -18,7 +18,8 @@ export class ChatbotServiceService {
     "hi": "Hello",
     "Who are you": "My name is Test Sat Bot",
     "What is your role": "Just guide for the user",
-    "defaultmsg": "I can't understand your text. Can you please repeat"
+    "defaultmsg": "I can't understand your text. Can you please repeat",
+    "Aaj kamayenga to kal baithake khayenga" : "aa meri jaan..."
   }
 
   getBotAnswer(msg: string) {
