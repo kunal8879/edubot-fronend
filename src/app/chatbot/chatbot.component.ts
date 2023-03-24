@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ChatbotServiceService, Message } from './chatbot-service.service';
+import { MessageModel } from './model';
 
 @Component({
   selector: 'app-chatbot',
@@ -8,31 +9,32 @@ import { ChatbotServiceService, Message } from './chatbot-service.service';
 })
 export class ChatbotComponent implements OnInit{
 
-  messages: Message[] = [];
+  messages123: MessageModel[] = [];
   value: string = '';
   isLoading: boolean = true;
 
   constructor(private chatbotServiceService: ChatbotServiceService) { }
 
   ngOnInit(): void {
-    this.chatbotServiceService.conversation.subscribe((val) => {
-      this.messages = this.messages.concat(val);
-    });
-    this.messages.push(new Message('bot', 'Hello, I am Test Bot. How can I help you?', new Date().toString().split(' ')[4]));
     this.isLoading = false;
   }
 
   sendMessage() {
-
     if(this.value.trim() != '') {
       this.isLoading = true;
-      console.log(this.isLoading);
-      this.chatbotServiceService.getBotAnswer(this.value);
-      this.value = '';
-      setTimeout(() => { this.isLoading = false; }, 1500);
-    }
-    console.log(this.isLoading);
-    
-  }
+      let currentTime: string = new Date().toString().split(' ')[4];
+      
+      let messageModel = new MessageModel('user', this.value, currentTime);
+      this.messages123.push(messageModel);
 
+      console.log(messageModel);
+
+      this.value = '';
+      this.chatbotServiceService.getBotMessage(messageModel).subscribe((val) => {
+        console.log(val);
+        this.messages123.push(val);
+        this.isLoading = false;
+      });
+    }
+  }
 }
