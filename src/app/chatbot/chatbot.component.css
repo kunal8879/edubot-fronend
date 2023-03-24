@@ -113,6 +113,7 @@ label i.fas {
 }
 
 .input {
+    position: sticky;
     align-content: center;
     margin: 10px auto 10px;
     height: 45px;
