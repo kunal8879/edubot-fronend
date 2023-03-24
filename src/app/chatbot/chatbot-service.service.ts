@@ -17,34 +17,8 @@ export class ChatbotServiceService {
 
   constructor(private http: HttpClient) { }
 
-  conversation = new Subject<Message[]>();
-  // messageMap = {
-  //   "hi": "Hello",
-  //   "Who are you": "My name is Test Sat Bot",
-  //   "What is your role": "Just guide for the user",
-  //   "defaultmsg": "I can't understand your text. Can you please repeat",
-  //   "Aaj kamayenga to kal baithake khayenga" : "aa meri jaan..."
-  // }
-
-  // getBotAnswer(msg: string): Observable<string> {
-  //   const userMessage = new Message('user', msg, new Date().toString().split(' ')[4]);
-  //   this.conversation.next([userMessage]);
-  //   const botMessage = new Message('bot', this.getBotMessage(msg), new Date().toString().split(' ')[4]);
-  //   setTimeout(() => {
-  //     this.conversation.next([botMessage]);
-  //   }, 1500);
-  // }
-
-  // getBotMessage(question: string) {
-  //   let answer : any = this.messageMap[question as keyof typeof this.messageMap];
-  //   return answer || this.messageMap['defaultmsg'];
-  // }
-
-  getBotMessage(model: MessageModel): Observable<any> {
-    // return this.http.post<any>(`${this.apiUrl}`, model, {
-    //   responseType: 'text' as 'json'
-    // });
-    return this.http.post<any>(`${this.apiUrl}`, model);
+  getBotMessage(Model: MessageModel): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}`, Model);
   }
 
 }
