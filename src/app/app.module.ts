@@ -10,11 +10,17 @@ import { HttpClientModule } from '@angular/common/http';
 // Angular Material imports
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MenuComponent } from './menu/menu.component';
+import { UserListComponent } from './user-list/user-list.component';
+import { UnansweredQuestionsComponent } from './unanswered-questions/unanswered-questions.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChatbotComponent
+    ChatbotComponent,
+    MenuComponent,
+    UserListComponent,
+    UnansweredQuestionsComponent
   ],
   imports: [
     BrowserModule,
