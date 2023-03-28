@@ -1,4 +1,4 @@
-/* .head {
+.head {
     padding: 16px;
     color: white;
     background-color: black;
@@ -32,7 +32,7 @@
 .ls .search {
     text-align: end;
     margin: 15px 0px;
-    height: 30px;   
+    height: 30px;
 }
 
 .nav {
@@ -60,7 +60,7 @@
     display: flex;
     justify-content: center;
     margin: 10px 150px;
-    // border-radius: 30px;
+    /* border-radius: 30px; */
 }
 
 .highlights {
@@ -233,4 +233,4 @@ hr.solid {
 .moodle-site {
     height: 1000px;
     margin-bottom: 100px;
-} */
+}

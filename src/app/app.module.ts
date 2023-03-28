@@ -13,6 +13,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MenuComponent } from './menu/menu.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UnansweredQuestionsComponent } from './unanswered-questions/unanswered-questions.component';
+import { MoodleComponent } from './moodle/moodle.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { UnansweredQuestionsComponent } from './unanswered-questions/unanswered-
     ChatbotComponent,
     MenuComponent,
     UserListComponent,
-    UnansweredQuestionsComponent
+    UnansweredQuestionsComponent,
+    MoodleComponent
   ],
   imports: [
     BrowserModule,
