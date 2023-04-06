@@ -1,0 +1,17 @@
+body {
+    margin: 0px;
+}
+
+.body .navbar {
+    color: white;
+    background-color: rgb(62, 62, 62);
+}
+
+.body .menu ul li {
+    cursor: pointer;
+}
+
+.body .menu ul li a {
+    text-decoration: none;
+    color: white;
+}

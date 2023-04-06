@@ -1,4 +1,4 @@
-/* .head {
+.head {
     padding: 16px;
     color: white;
     background-color: black;
@@ -56,11 +56,25 @@
     background-color: rgb(59, 59, 59);
 }
 
+.nav ul button {
+    border: 0px;
+    text-align: center;
+    padding: 15px;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(59, 59, 59);
+}
+
+.nav ul button a {
+    text-decoration: none;
+    color: white;
+}
+
 .img {
     display: flex;
     justify-content: center;
     margin: 10px 150px;
-    // border-radius: 30px;
+    border-radius: 30px;
 }
 
 .highlights {
@@ -192,7 +206,6 @@ hr.solid {
 }
 
 .link .list {
-    margin: 0px 10px;
     display: flex;
     text-align: left;
     justify-content: center;
@@ -230,7 +243,11 @@ hr.solid {
     background-color: rgb(195, 2, 2);
 }
 
+.nav ul button:hover {
+    background-color: rgb(195, 2, 2);
+}
+
 .moodle-site {
     height: 1000px;
     margin-bottom: 100px;
-} */
+}
