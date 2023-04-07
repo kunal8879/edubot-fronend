@@ -8,8 +8,13 @@ body {
     background-color: rgb(62, 62, 62);
 }
 
+.navbar b {
+    margin: 0px 20px;
+}
+
 .body .menu ul li {
     cursor: pointer;
+    margin: 0px 20px;
 }
 
 .body .menu ul li a {

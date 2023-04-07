@@ -2,32 +2,25 @@ body {
     margin: 0px;
 }
 
+.component {
+    margin: 10px 182px;
+    justify-content: center;
+}
+
+.body {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.component .content {
+    text-align: center;
+}
+
 table th {
     border: 1px solid;
     border-color: black;
 }
 
-.component {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
 
-.body {
-    display: grid;
-    grid-template-columns: 40% 60%;
-}
-
-.body .navbar {
-    color: white;
-    background-color: rgb(62, 62, 62);
-}
-
-.body .menu ul li {
-    cursor: pointer;
-}
-
-.body .menu ul li a {
-    text-decoration: none;
-    color: white;
-}
