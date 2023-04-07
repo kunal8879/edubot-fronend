@@ -14,7 +14,7 @@
 .ls {
     display: grid;
     grid-template-columns: auto auto;
-    padding: 10px 172px;
+    padding: 10px 178px;
 }
 
 .ls .logo img {
