@@ -1,20 +1,13 @@
-body {
-    margin: 0px;
-}
-
-.component {
-    margin: 10px 182px;
-    justify-content: center;
-}
-
 .body {
     display: grid;
     grid-template-columns: 30% 70%;
     border-radius: 10px;
     overflow: hidden;
+    margin: 10px 176px;
+    justify-content: center;
 }
 
-.component .content {
+.body .content {
     text-align: center;
 }
 
