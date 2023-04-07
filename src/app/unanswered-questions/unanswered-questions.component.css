@@ -1,6 +1,5 @@
 body {
-    margin: 5px;
-    width: 100%;
+    margin: 0px;
 }
 
 table th {
@@ -8,9 +7,15 @@ table th {
     border-color: black;
 }
 
+.component {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
 .body {
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 40% 60%;
 }
 
 .body .navbar {
