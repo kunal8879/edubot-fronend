@@ -1,69 +1,15 @@
-.head {
-    padding: 16px;
-    color: white;
-    background-color: black;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+.moodle-site {
+    height: 1000px;
+    margin-bottom: 100px;
 }
 
-.head img {
-    padding: 10px 5px;
-    height: 40px;
-    width: 120px;
-}
-
-.head input {
-    align-items: end;
-}
-
-.ls {
-    display: grid;
-    grid-template-columns: auto auto;
-}
-
-.ls {
-    padding: 10px 172px;
-}
-
-.ls .logo img {
-    width: 140px;
-}
-
-.ls .search {
-    text-align: end;
-    margin: 15px 0px;
-    height: 30px;
-}
-
-.nav {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    border-radius: 10px;
-}
-
-.nav ul {
-    overflow: auto;
-    margin: 10px 0px;
-    border-radius: 10px;
-}
-
-.nav ul li {
-    float: left;
-    list-style: none;
-    padding: 15px 16px;
-    color: white;
-    background-color: rgb(59, 59, 59);
-}
-
-.img {
+.content .img {
     display: flex;
     justify-content: center;
     margin: 10px 150px;
-    /* border-radius: 30px; */
 }
 
-.highlights {
+.content .highlights {
     display: flex;
     justify-content: center;
 }
@@ -92,20 +38,20 @@
     font-weight: 500;
 }
 
-.highlights .brief .icon p {
-    text-align: justify;
-}
-
 .highlights .brief .icon img {
     max-width: 200px;
 }
 
-.info {
+.highlights .brief .icon p {
+    text-align: justify;
+}
+
+.content .info {
     display: flex;
     justify-content: center;
 }
 
-.about {
+.info .about {
     display: grid;
     grid-template-columns: auto auto;
     max-width: 1170px;
@@ -213,6 +159,7 @@ hr.solid {
 .footer {
     display: flex;
     justify-content: center;
+    
 }
 
 .footer .credits {
@@ -223,20 +170,4 @@ hr.solid {
     border: 1px solid;
     border-radius: 10px;
     box-shadow: 0 0 5px 5px rgb(200, 200, 200);
-}
-
-.nav ul li:hover {
-    cursor: pointer;
-    background-color: rgb(195, 2, 2);
-}
-
-.moodle-site {
-    /* height: 1000px;
-    margin-bottom: 100px; */
-    z-index: 0;
-}
-
-.chatbot {
-    position: fixed;
-    z-index: 9999;
 }
