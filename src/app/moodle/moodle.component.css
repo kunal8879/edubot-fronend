@@ -231,6 +231,12 @@ hr.solid {
 }
 
 .moodle-site {
-    height: 1000px;
-    margin-bottom: 100px;
+    /* height: 1000px;
+    margin-bottom: 100px; */
+    z-index: 0;
+}
+
+.chatbot {
+    position: fixed;
+    z-index: 9999;
 }
