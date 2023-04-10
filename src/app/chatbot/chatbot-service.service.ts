@@ -1,7 +1,7 @@
 import { Injectable, Type } from '@angular/core';
 import { Observable, Subject, timestamp } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { MessageModel } from './model';
+import { MessageModel } from '../models/chatbot_response';
 
 export class Message {
   constructor(public author: string, public content: string, public time: string) { }

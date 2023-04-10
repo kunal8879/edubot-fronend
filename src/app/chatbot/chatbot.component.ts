@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ChatbotServiceService, Message } from './chatbot-service.service';
-import { MessageModel } from './model';
+import { MessageModel } from '../models/chatbot_response';
 import { FormControl } from '@angular/forms';
 
 @Component({

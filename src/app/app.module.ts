@@ -16,6 +16,7 @@ import { UserListComponent } from './user-list/user-list.component';
 import { UnansweredQuestionsComponent } from './unanswered-questions/unanswered-questions.component';
 import { MoodleComponent } from './moodle/moodle.component';
 import { LoginComponent } from './menu/login/login.component';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { LoginComponent } from './menu/login/login.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    MatTableModule,
     RouterModule.forRoot([
       {path: 'moodle', component: MoodleComponent},
       {path: 'login', component: LoginComponent},
