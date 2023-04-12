@@ -17,7 +17,10 @@ import { UnansweredQuestionsComponent } from './unanswered-questions/unanswered-
 import { MoodleComponent } from './moodle/moodle.component';
 import { LoginComponent } from './menu/login/login.component';
 import { MatTableModule } from '@angular/material/table';
-import {MatPaginatorModule} from '@angular/material/paginator';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -46,7 +49,10 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 
     // Angular Material imports
     BrowserAnimationsModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

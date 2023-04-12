@@ -1,0 +1,22 @@
+.body {
+  text-align: center;
+  width: 500px;
+  margin: 50px auto;
+  padding: 50px 0px;
+  border: 1px solid;
+  border-color: rgb(127, 127, 127);
+  box-shadow: 5px 5px 5px 5px rgb(124, 124, 124);
+}
+
+p {
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.example-container input {
+  border: 2px solid;
+  border-color: black ;
+}
+
+
+/* (#51e5a5, #407cf3); */

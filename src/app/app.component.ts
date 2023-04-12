@@ -1,7 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { Subscription } from 'rxjs';
-import { MoodleComponent } from './moodle/moodle.component';
 
 @Component({
   selector: 'app-root',
