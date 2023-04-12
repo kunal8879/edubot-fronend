@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { UnansweredQuestion } from '../models/unanswered_question';
-import { UnansweredQuestionServiceService } from './unanswered-question-service.service';
+import { UnansweredQuestionService } from './unanswered-question.service';
 import { MatPaginator } from '@angular/material/paginator';
 
 // let unanswered_question: UnansweredQuestion[] = [
@@ -28,7 +28,7 @@ export class UnansweredQuestionsComponent implements OnInit {
   dataSource: UnansweredQuestion[] = [];
   isLoaded: boolean = false;
 
-  constructor(private unansweredQuestion: UnansweredQuestionServiceService) { }
+  constructor(private unansweredQuestion: UnansweredQuestionService) { }
 
   ngOnInit() {
     this.isLoaded = true;

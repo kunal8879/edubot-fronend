@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 
 @Component({
@@ -6,9 +6,12 @@ import { FormControl, Validators } from '@angular/forms';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
   email = new FormControl('', [Validators.required, Validators.email]);
-  hide : boolean = true;
+  hide = true;
+
+  ngOnInit() {
+  }
 
   getErrorMessage() {
     if (this.email.hasError('required')) {
@@ -18,5 +21,3 @@ export class LoginComponent {
     return this.email.hasError('email') ? 'Not a valid email' : '';
   }
 }
-
-export class ButtonOverviewExample {}

@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class UnansweredQuestionServiceService {
+export class UnansweredQuestionService {
   
   apiUrl = 'http://127.0.0.1:8000/unanswered_questions'
 
