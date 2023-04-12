@@ -10,13 +10,15 @@
 
 p {
   margin-bottom: 10px;
-  font-weight: 400;
+  font-size: large;
+}
+
+::placeholder { 
+  padding: 5px;
 }
 
 .example-container input {
+  height: 30px;
   border: 2px solid;
-  border-color: black ;
+  border-color: rgb(127, 127, 127) ;
 }
-
-
-/* (#51e5a5, #407cf3); */

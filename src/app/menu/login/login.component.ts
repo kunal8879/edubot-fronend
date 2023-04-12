@@ -18,5 +18,3 @@ export class LoginComponent {
     return this.email.hasError('email') ? 'Not a valid email' : '';
   }
 }
-
-export class ButtonOverviewExample {}
