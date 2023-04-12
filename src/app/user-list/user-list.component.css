@@ -1,9 +1,20 @@
 .body {
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 20% 80%;
     justify-content: center;
 }
 
 .body .content {
     text-align: center;
+}
+
+.content p {
+    font-size: x-large;
+    padding: 10px 0px;
+    color: rgb(60, 60, 60);
+    background-color: rgb(155, 155, 155);
+}
+
+.main b {
+    font-size: larger;
 }

@@ -17,6 +17,7 @@ import { UnansweredQuestionsComponent } from './unanswered-questions/unanswered-
 import { MoodleComponent } from './moodle/moodle.component';
 import { LoginComponent } from './menu/login/login.component';
 import { MatTableModule } from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { MatTableModule } from '@angular/material/table';
     FormsModule,
     HttpClientModule,
     MatTableModule,
+    MatPaginatorModule,
     RouterModule.forRoot([
       {path: 'moodle', component: MoodleComponent},
       {path: 'login', component: LoginComponent},

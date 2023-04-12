@@ -1,10 +1,12 @@
 <div class="body">
     <div class="navbar">
-        <b>Menu</b>
+        <div class="head">
+            <p>Menu</p>
+        </div>
         <div class="menu">
             <ul>
-                <li><a [routerLink]="['/unanswered-questions']">Unanswered Questions</a></li>
-                <li><a [routerLink]="['/user-list']">User List</a></li>
+                <li [routerLink]="['/unanswered-questions']">Unanswered Questions</li>
+                <li [routerLink]="['/user-list']">User List</li>
             </ul>
         </div>
     </div>

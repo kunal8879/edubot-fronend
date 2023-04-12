@@ -1,6 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { UnansweredQuestion } from '../models/unanswered_question';
 import { UnansweredQuestionServiceService } from './unanswered-question-service.service';
+import { MatPaginator } from '@angular/material/paginator';
+
+export interface PeriodicElement {
+  name: string;
+  position: number;
+  weight: number;
+}
+
+let unanswered_question: UnansweredQuestion[] = [
+  { id: 1, chat: 'Hydrogen', time: 'new time' },
+  { id: 2, chat: 'Helium', time: 'new time' },
+  { id: 3, chat: 'Lithium', time: 'new time' },
+  { id: 4, chat: 'Beryllium', time: 'new time' },
+  { id: 5, chat: 'Boron', time: 'new time' },
+  { id: 6, chat: 'Carbon', time: 'new time' },
+  { id: 7, chat: 'Nitrogen', time: 'new time' },
+  { id: 8, chat: 'Oxygen', time: 'new time' },
+  { id: 9, chat: 'Fluorine', time: 'new time' },
+  { id: 10, chat: 'Neon', time: 'new time' }
+];
 
 @Component({
   selector: 'app-unanswered-questions',
@@ -8,16 +28,21 @@ import { UnansweredQuestionServiceService } from './unanswered-question-service.
   styleUrls: ['./unanswered-questions.component.css']
 })
 export class UnansweredQuestionsComponent implements OnInit {
+  @ViewChild(MatPaginator) paginator: MatPaginator;
 
   displayedColumns: string[] = ['Index', 'Questions', 'Time'];
-  dataSource: UnansweredQuestion[];
+  dataSource = unanswered_question;
   isLoaded: boolean = false;
+
+  // displayedColumns: string[] = ['position', 'name', 'weight'];
+  // dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
   constructor(private unansweredQuestion: UnansweredQuestionServiceService) { }
 
   ngOnInit() {
     this.isLoaded = true;
     this.getAllUnansweredQuestions();
+
     this.isLoaded = false;
   }
 

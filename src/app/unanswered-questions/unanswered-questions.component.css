@@ -1,6 +1,6 @@
 .body {
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 20% 80%;
     justify-content: center;
 }
 
@@ -8,7 +8,22 @@
     text-align: center;
 }
 
-table th {
-    border: 1px solid;
-    border-color: black;
+.content p {
+    font-size: x-large;
+    padding: 10px 0px;
+    color: rgb(60, 60, 60);
+    background-color: rgb(155, 155, 155);
+}
+
+.main b {
+    font-size: larger;
+}
+
+.mat-elevation-z0 {
+    box-shadow: 5px blue;
+}
+
+.table {
+    margin: auto;
+    width: 95%;
 }
