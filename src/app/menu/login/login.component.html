@@ -2,7 +2,7 @@
     <p>Admin Login</p>
     <form #loginForm="ngForm" (ngSubmit)="submit(loginForm)">
         <div class="example-container">
-            <mat-form-field appearance="outline">
+            <mat-form-field class="input" appearance="outline">
                 <mat-label>Enter your username</mat-label>
                 <input matInput placeholder="username" FormControl="email" name="username" ngModel required>
                 <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
@@ -10,7 +10,7 @@
 
             <br>
 
-            <mat-form-field appearance="outline">
+            <mat-form-field class="input" appearance="outline">
                 <mat-label>Enter your password</mat-label>
                 <input matInput placeholder="password" [type]="hide ? 'password' : 'text'" name="password" ngModel>
                 <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
@@ -20,7 +20,7 @@
             </mat-form-field>
         </div>
         <section>
-            <button type="submit" mat-raised-button color="primary" style="background-color: black;" [disabled]="!loginForm.valid">Sign In</button>
+            <button type="submit" mat-raised-button color="primary" style="color: white; background-color: black;" [disabled]="!loginForm.valid">Sign In</button>
         </section>
     </form>
 </div>
