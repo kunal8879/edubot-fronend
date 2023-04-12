@@ -3,12 +3,6 @@ import { UnansweredQuestion } from '../models/unanswered_question';
 import { UnansweredQuestionServiceService } from './unanswered-question-service.service';
 import { MatPaginator } from '@angular/material/paginator';
 
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-}
-
 // let unanswered_question: UnansweredQuestion[] = [
 //   { id: 1, chat: 'Hydrogen', time: 'new time' },
 //   { id: 2, chat: 'Helium', time: 'new time' },
