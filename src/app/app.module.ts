@@ -21,6 +21,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -37,8 +38,6 @@ import { MatButtonModule } from '@angular/material/button';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    MatTableModule,
-    MatPaginatorModule,
     RouterModule.forRoot([
       {path: 'moodle', component: MoodleComponent},
       {path: 'login', component: LoginComponent},
@@ -51,8 +50,11 @@ import { MatButtonModule } from '@angular/material/button';
     BrowserAnimationsModule,
     MatTooltipModule,
     MatFormFieldModule,
+    MatTableModule,
+    MatPaginatorModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

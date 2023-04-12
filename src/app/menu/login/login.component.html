@@ -1,22 +1,26 @@
 <div class="body">
     <p>Admin Login</p>
-    <div class="example-container">
-        <mat-form-field appearance="outline">
-            <mat-label>Enter your username</mat-label>
-            <input matInput placeholder="username" FormControl="email" required>
-            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-        </mat-form-field><br>
-        
-        <mat-form-field appearance="outline">
-            <mat-label>Enter your password</mat-label>
-            <input matInput placeholder="password" [type]="hide ? 'password' : 'text'">
-            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-                [attr.aria-pressed]="hide">
-                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-            </button>
-        </mat-form-field>
-    </div>
-    <section>
-        <button mat-raised-button color="primary" style="background-color: black;">Sign In</button>
-    </section>
-</div>  
+    <form #loginForm="ngForm" (ngSubmit)="submit(loginForm)">
+        <div class="example-container">
+            <mat-form-field appearance="outline">
+                <mat-label>Enter your username</mat-label>
+                <input matInput placeholder="username" FormControl="email" name="username" ngModel required>
+                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+
+            <br>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Enter your password</mat-label>
+                <input matInput placeholder="password" [type]="hide ? 'password' : 'text'" name="password" ngModel>
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+        </div>
+        <section>
+            <button type="submit" mat-raised-button color="primary" style="background-color: black;" [disabled]="!loginForm.valid">Sign In</button>
+        </section>
+    </form>
+</div>
