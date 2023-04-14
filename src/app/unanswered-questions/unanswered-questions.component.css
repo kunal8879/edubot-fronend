@@ -8,6 +8,10 @@
     text-align: center;
 }
 
+.menu-component {
+    background-color: rgb(62, 62, 62);
+}
+
 .content p {
     font-size: x-large;
     padding: 10px 0px;
@@ -15,8 +19,10 @@
     background-color: rgb(155, 155, 155);
 }
 
-.main b {
-    font-size: larger;
+.heading {
+    font-size: xx-large;
+    color: rgb(60, 60, 60);
+    margin: 35px 0px;
 }
 
 .mat-elevation-z0 {
@@ -24,6 +30,6 @@
 }
 
 .table {
-    margin: auto;
+    margin: 0 auto;
     width: 95%;
 }

@@ -1,14 +1,15 @@
 .body .navbar {
-    height: 725px;
+    width: max-content;
+    height: 750px;
     position: relative;
     color: white;
     background-color: rgb(62, 62, 62);
 }
 
-/* .menu {
-    height: 610px;
-} */
-
+.body {
+    position: fixed;
+    margin-top: 52px;
+}
 .navbar .head {
     text-align: center;
     font-size: x-large;

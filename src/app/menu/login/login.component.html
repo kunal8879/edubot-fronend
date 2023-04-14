@@ -1,5 +1,8 @@
-<div class="body">
+<div class="login-page">
     <p>Admin Login</p>
+    <div class="wrong" *ngIf="wrong">
+        <p>Username and Password combination is incorrect.</p>
+    </div>
     <form #loginForm="ngForm" (ngSubmit)="submit(loginForm)">
         <div class="example-container">
             <mat-form-field class="input" appearance="outline">
@@ -20,11 +23,7 @@
             </mat-form-field>
         </div>
         <section>
-<<<<<<< HEAD
-            <button type="submit" mat-raised-button color="primary" style="color: white; background-color: black;" [disabled]="!loginForm.valid">Sign In</button>
-=======
             <button type="submit" mat-raised-button [disabled]="!loginForm.valid">Sign In</button>
->>>>>>> 766dd485f46e1131cfd5981b4e9e8e275f906659
         </section>
     </form>
 </div>

@@ -8,11 +8,16 @@ import { LoginService } from './login.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent{
+export class LoginComponent implements OnInit{
   email = new FormControl('', [Validators.required, Validators.email]);
-  hide : boolean = true;
+  hide: boolean = true;
+  wrong: boolean;
 
   constructor(private loginService: LoginService) { }
+
+  ngOnInit(): void {
+    this.wrong = false;
+  }
 
   getErrorMessage() {
     if (this.email.hasError('required')) {
@@ -29,6 +34,7 @@ export class LoginComponent{
         window.location.href = "/unanswered-questions";
       } else {
         console.log("Login failed");
+        this.wrong = true;
       }
     });
   }
