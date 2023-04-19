@@ -8,7 +8,7 @@ import { Login } from 'src/app/models/login';
 })
 export class LoginService {
 
-  apiUrl = 'http://127.0.0.1:8000/login'
+  apiUrl = 'http://18.234.211.103:8000/login'
 
   constructor(private http: HttpClient) { }
 

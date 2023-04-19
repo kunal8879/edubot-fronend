@@ -13,7 +13,7 @@ export class Message {
 
 export class ChatbotServiceService {
 
-  apiUrl = 'http://127.0.0.1:8000/edubot'
+  apiUrl = 'http://18.234.211.103:8000/edubot'
 
   constructor(private http: HttpClient) { }
 

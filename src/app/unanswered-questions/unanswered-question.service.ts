@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class UnansweredQuestionService {
   
-  apiUrl = 'http://127.0.0.1:8000/unanswered_questions'
+  apiUrl = 'http://18.234.211.103:8000/unanswered_questions'
 
   constructor(private http: HttpClient) { }
 
