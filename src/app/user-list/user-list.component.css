@@ -1,11 +1,19 @@
 .body {
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 16% 84%;
     justify-content: center;
+}
+
+app-menu {
+    width: 20%;
 }
 
 .body .content {
     text-align: center;
+}
+
+.menu-component {
+    background-color: rgb(62, 62, 62);
 }
 
 .content p {
@@ -15,6 +23,17 @@
     background-color: rgb(155, 155, 155);
 }
 
-.main b {
-    font-size: larger;
+.heading {
+    font-size: xx-large;
+    color: rgb(60, 60, 60);
+    margin: 35px 0px;
+}
+
+.mat-elevation-z0 {
+    box-shadow: 5px blue;
+}
+
+.table {
+    margin: 0 auto;
+    width: 95%;
 }
