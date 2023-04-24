@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'edu-bot-frontend';
+  isShow : boolean = true;
+  hideComponent() {
+    this.isShow = false;
+  }
 }
