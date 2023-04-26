@@ -13,6 +13,7 @@ const routes: Routes = [
   { path: 'unanswered-questions', component: UnansweredQuestionsComponent},
   { path: '**', pathMatch: 'full', component: MoodleComponent },
   { path: 'menu', pathMatch: 'full', component: LoginComponent },
+  { path: 'logout', redirectTo: '/login', pathMatch: 'full' },
 ];
 
 @NgModule({
