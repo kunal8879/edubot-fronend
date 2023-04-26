@@ -23,6 +23,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 
+import { AuthModule } from '@auth0/auth0-angular';
+import { environment as env } from 'src/environments/environment';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +34,7 @@ import { MatInputModule } from '@angular/material/input';
     UserListComponent,
     UnansweredQuestionsComponent,
     MoodleComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,6 +48,9 @@ import { MatInputModule } from '@angular/material/input';
       {path: 'unanswered-questions', component: UnansweredQuestionsComponent},
       {path: 'user-list', component: UserListComponent},
     ]),
+    AuthModule.forRoot({
+      ...env.auth,
+    }),
 
     // Angular Material imports
     BrowserAnimationsModule,
