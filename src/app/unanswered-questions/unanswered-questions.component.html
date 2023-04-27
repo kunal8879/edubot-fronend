@@ -2,7 +2,7 @@
   <div class="menu-component">
     <app-menu></app-menu>
   </div>
-  <div class="content">
+  <div class="content" *ngIf="auth.isAuthenticated$ | async; else notAuthentiated">
     <p>ADMIN PORTAL</p>
     <div class="main">
       <div class="heading">
@@ -37,4 +37,9 @@
       </div>
     </div>
   </div>
+  <ng-template #notAuthentiated>
+    <div class="not-authenticated">
+      <p>Not Authenticated</p>
+    </div>
+  </ng-template>
 </div>

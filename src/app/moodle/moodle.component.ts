@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Subscription, subscribeOn } from 'rxjs';
+import { Subscription } from 'rxjs';
+import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
   selector: 'app-moodle',
@@ -14,8 +15,13 @@ export class MoodleComponent implements OnInit{
   }
   working: boolean;
 
+  constructor(public auth: AuthService) { }
+
   ngOnInit() {
-    
+  }
+
+  loginWithRedirect(): void {
+    this.auth.loginWithRedirect();
   }
 
 }

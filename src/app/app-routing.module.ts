@@ -11,8 +11,8 @@ const routes: Routes = [
   { path: 'menu', component: MenuComponent},
   { path: 'user-list', component: UserListComponent },
   { path: 'unanswered-questions', component: UnansweredQuestionsComponent},
-  { path: '**', pathMatch: 'full', component: MoodleComponent },
-  { path: 'menu', pathMatch: 'full', component: LoginComponent },
+  { path: '**', component: MoodleComponent },
+  { path: 'menu', component: LoginComponent },
 ];
 
 @NgModule({

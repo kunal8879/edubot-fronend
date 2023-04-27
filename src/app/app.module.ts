@@ -23,6 +23,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 
+import { AuthModule } from '@auth0/auth0-angular';
+import { environment } from '../environments/environment';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,17 +37,17 @@ import { MatInputModule } from '@angular/material/input';
     LoginComponent
   ],
   imports: [
+    AuthModule.forRoot({
+      domain: 'dev-3oanhzpgtmwe6zt5.us.auth0.com',
+      clientId: '3IuU9LLiQBFMhZ6m4riW8UMmnWIo5x10',
+      authorizationParams: {
+        redirect_uri: "http://localhost:4200/unanswered-questions"
+      }
+    }),
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot([
-      {path: 'moodle', component: MoodleComponent},
-      {path: 'login', component: LoginComponent},
-      {path: 'menu', component: MenuComponent},
-      {path: 'unanswered-questions', component: UnansweredQuestionsComponent},
-      {path: 'user-list', component: UserListComponent},
-    ]),
 
     // Angular Material imports
     BrowserAnimationsModule,
@@ -54,7 +57,7 @@ import { MatInputModule } from '@angular/material/input';
     MatPaginatorModule,
     MatIconModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

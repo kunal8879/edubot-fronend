@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { UnansweredQuestion } from '../models/unanswered_question';
 import { UnansweredQuestionService } from './unanswered-question.service';
 import { MatPaginator } from '@angular/material/paginator';
+import { AuthService } from '@auth0/auth0-angular';
 
 // let unanswered_question: UnansweredQuestion[] = [
 //   { id: 1, chat: 'Hydrogen', time: 'new time' },
@@ -28,12 +29,14 @@ export class UnansweredQuestionsComponent implements OnInit {
   dataSource: UnansweredQuestion[] = [];
   isLoaded: boolean = false;
 
-  constructor(private unansweredQuestion: UnansweredQuestionService) { }
+  constructor(private unansweredQuestion: UnansweredQuestionService, public auth: AuthService) { }
 
   ngOnInit() {
+    console.log(this.auth);
     this.isLoaded = true;
     this.getAllUnansweredQuestions();
     this.isLoaded = false;
+    
   }
 
   getAllUnansweredQuestions() {
