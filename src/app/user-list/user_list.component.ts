@@ -5,9 +5,9 @@ import { NewUser } from '../models/new_user';
 import { UserService } from './user.service';
 
 @Component({
-  selector: 'app-user-list',
-  templateUrl: './user-list.component.html',
-  styleUrls: ['./user-list.component.css']
+  selector: 'app-user_list',
+  templateUrl: './user_list.component.html',
+  styleUrls: ['./user_list.component.css']
 })
 export class UserListComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;

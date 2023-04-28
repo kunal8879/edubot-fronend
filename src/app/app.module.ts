@@ -12,8 +12,8 @@ import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MenuComponent } from './menu/menu.component';
-import { UserListComponent } from './user-list/user-list.component';
-import { UnansweredQuestionsComponent } from './unanswered-questions/unanswered-questions.component';
+import { UserListComponent } from './user-list/user_list.component';
+import { UnansweredQuestionsComponent } from './unanswered_questions/unanswered_questions.component';
 import { MoodleComponent } from './moodle/moodle.component';
 import { LoginComponent } from './menu/login/login.component';
 import { MatTableModule } from '@angular/material/table';
@@ -22,9 +22,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
-
-import { AuthModule } from '@auth0/auth0-angular';
-import { environment as env } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -45,13 +42,9 @@ import { environment as env } from 'src/environments/environment';
       {path: 'moodle', component: MoodleComponent},
       {path: 'login', component: LoginComponent},
       {path: 'menu', component: MenuComponent},
-      {path: 'unanswered-questions', component: UnansweredQuestionsComponent},
-      {path: 'user-list', component: UserListComponent},
+      {path: 'unanswered_questions', component: UnansweredQuestionsComponent},
+      {path: 'user_list', component: UserListComponent},
     ]),
-    AuthModule.forRoot({
-      ...env.auth,
-    }),
-
     // Angular Material imports
     BrowserAnimationsModule,
     MatTooltipModule,

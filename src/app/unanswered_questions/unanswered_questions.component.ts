@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { UnansweredQuestion } from '../models/unanswered_question';
-import { UnansweredQuestionService } from './unanswered-question.service';
+import { UnansweredQuestionService } from './unanswered_question.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 
@@ -18,9 +18,9 @@ import { MatTableDataSource } from '@angular/material/table';
 // ];
 
 @Component({
-  selector: 'app-unanswered-questions',
-  templateUrl: './unanswered-questions.component.html',
-  styleUrls: ['./unanswered-questions.component.css']
+  selector: 'app-unanswered_questions',
+  templateUrl: './unanswered_questions.component.html',
+  styleUrls: ['./unanswered_questions.component.css']
 })
 export class UnansweredQuestionsComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;

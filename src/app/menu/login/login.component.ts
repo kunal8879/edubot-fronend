@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit{
     this.loginService.login(loginForm.value).subscribe(data => {
       if (data == true) {
         console.log("Login success");
-        window.location.href = "/unanswered-questions";
+        window.location.href = "/unanswered_questions";
       } else {
         console.log("Login failed");
         this.wrong = true;
